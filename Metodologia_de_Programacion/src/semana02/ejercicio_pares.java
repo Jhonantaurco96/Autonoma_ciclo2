@@ -15,10 +15,12 @@ public class ejercicio_pares {
   
     public static void main(String[] args) {
 
-    int ultimoNumero = Integer.parseInt(JOptionPane.showInputDialog);
+    int ultimoNumero = Integer.parseInt(JOptionPane.showInputDialog("ingrese el ultimo nuemero"));
     int sumatotalpares = 0;
     
-    for (int i = 1; i <= ultimoNumero)
-    
+    for (int i = 1; i <= ultimoNumero ;i++){
+        System.out.println("imprimiendo : " + i);
+    }
   }
+}
 
