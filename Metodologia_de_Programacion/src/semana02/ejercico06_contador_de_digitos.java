@@ -12,12 +12,11 @@ import javax.swing.JOptionPane;
  * @author jhon
  */
 public class ejercico06_contador_de_digitos {
-    
+
     public static void main(String[] args) {
-      try {
+        try {
             int numeroEntero = Integer.parseInt(JOptionPane.showInputDialog("ingresa numero entero:"));
             int cantidadDeDigitos = Integer.toString(numeroEntero).length();
-   
 
             System.out.println("Numero ingresado: " + numeroEntero);
             System.out.println("Cantidad de digitos: " + cantidadDeDigitos);
