@@ -4,7 +4,8 @@
  */
 package semana02;
 
-import java.util.Scanner;
+import java.awt.HeadlessException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,24 +14,15 @@ import java.util.Scanner;
 public class ejercico06_contador_de_digitos {
     
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+      try {
+            int numeroEntero = Integer.parseInt(JOptionPane.showInputDialog("ingresa numero entero:"));
+            int cantidadDeDigitos = Integer.toString(numeroEntero).length();
+   
 
-        System.out.println("Ingrese un numero entero positivo:");
-        int numero = scanner.nextInt();
-
-        if (numero < 0) {
-            System.out.println("El numero ingresado no es positivo.");
-            return;
+            System.out.println("Numero ingresado: " + numeroEntero);
+            System.out.println("Cantidad de digitos: " + cantidadDeDigitos);
+        } catch (HeadlessException | NumberFormatException e) {
+            System.out.println("El valor ingresado no es un numero");
         }
-        
-        int contador = 0;
-        int numTemp = numero;
-        while (numTemp != 0) {
-            numTemp /= 10;
-            contador++;
-        }
-
-        System.out.println("El numero " + numero + " tiene " + contador + " dígitos.");
     }
 }
-
